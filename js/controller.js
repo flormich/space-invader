@@ -58,50 +58,42 @@ setInterval(run, 15);
 //         console.log("je suis ici" + i);
 //     }
 // }
-// }
+
 
 function pressMissileGauche(event) {
-    // for (var i = 1; i < 6; i = i + 2) {
-        if (keystate[" "] || keystate['5']) {
-            if (missile1.display == "none") {
-                missile1.vais.width = 5;
-                missile1.display = "block";
-                missile1.left = vaisseau.left;
-                missile1.top = vaisseau.top;
-                missile1.startAnimation(moveMissile, 15);
-            }
-        // }
+    if (keystate[" "] || keystate['5']) {
+        if (missile1.display == "none") {
+            missile1.vais.width = 5;
+            missile1.display = "block";
+            missile1.left = vaisseau.left;
+            missile1.top = vaisseau.top;
+            missile1.startAnimation(moveMissile, 15);
+        }
     }
 }
 
-function pressMissileGauche2(event) {
-    // for (var i = 1; i < 6; i = i + 2) {
-        if (keystate[" "] || keystate['5']) {
-            if ((missile3.display == "none") && (missile1.top == 100)) {
-                missile3.vais.width = 5;
-                missile3.display = "block";
-                missile3.left = vaisseau.left;
-                missile3.top = vaisseau.top;
-                missile3.startAnimation(moveMissile, 15);
-            }
-
-        // }
-    }
-}
-
+// function pressMissileGauche2(event) {
+//         if (keystate[" "] || keystate['5']) {
+//             if (missile3.display == "none" || missile1.top == vaisseau.top -200) {
+//                 missile3.vais.width = 5;
+//                 missile3.display = "block";
+//                 missile3.left = vaisseau.left;
+//                 missile3.top = vaisseau.top;
+//                 missile3.startAnimation(moveMissile, 15);
+//             }
+//     }
+// }
 
 function pressMissileDroit(event) {
-    // for (var i = 2; i <= 6; i = i + 2) {
         if (keystate[" "] || keystate['5']) {
-            if ((missile2.display == "none") && (missile1.top == vaisseau.top + 500)) {
+            if (missile2.display == "none") {
                 missile2.vais.width = 5;
                 missile2.display = "block";
                 missile2.left = vaisseau.left + vaisseau.vais.width - 10;
                 missile2.top = vaisseau.top;
                 missile2.startAnimation(moveMissile, 15);
             }
-            pressMissileGauche(event);
-        // }
+            // pressMissileGauche(event);
     }
 }
 
