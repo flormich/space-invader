@@ -9,7 +9,21 @@
 
 
 
+## 💻 Installation
+Clone this reposoitory
 
+```
+git clone  https://github.com/flormich/space-invader
+
+```
+
+## 📺 [Picture]
+
+<br>
+<p align="center">
+ <img src="https://github.com/flormich/space-invader/blob/master/SpaceInvader.jpg">
+<br><br>
+</p>
 
 ## Todo
 
