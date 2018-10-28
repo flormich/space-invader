@@ -31,5 +31,5 @@ git clone  https://github.com/flormich/space-invader
 * Debug fire player
 
 
-## Copyright
+##  ©️ Copyright
 This project is under the MIT LICENSE
