@@ -21,11 +21,11 @@ git clone  https://github.com/flormich/space-invader
 
 <br>
 <p align="center">
- <img src="https://github.com/flormich/space-invader/tree/master/ressources/SpaceInvader.jpg">
+ <img src="https://github.com/flormich/space-invader/blob/master/ressources/SpaceInvader.jpg">
 <br><br>
 </p>
 
-## Todo
+## ➕ Todo
 
 * Debug clash
 * Debug fire player
