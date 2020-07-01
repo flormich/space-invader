@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pong</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="../css/index.css" /> -->
+    <script type="text/javascript" src="js/pong.js"></script>
+    <!-- <script type="text/javascript" src="js/controller.js"></script> -->
+    <!-- <script type="text/javascript" src="js/missile.js"></script> -->
+    <script type="text/javascript" src="js/pongMain.js"></script>
+    <!-- <script type="text/javascript" src="code_essai.js"></script> -->
+    <!-- <embed src="music/CREATION - Cinematic Fantasy Orchestral Music Mix _ Epic Emotive Musical Journey.mp3" autostart="false" loop="false" hidden="true"></embed> -->
+</head>
+
+<body>
+    <main>
+        <canvas id="canvas" width"640" height="480"></canvas>
+    </main>
+
+    <!-- <script type="text/javascript">
+
+    // taille de la fenêtre
+    if (document.body)
+    {
+        var larg = (document.body.clientWidth);
+        var haut = (document.body.clientHeight);
+    }
+
+
+        missile = {};
+        var raquette1 = new Sprite("images/rectagle-red.png", 100, 100);
+        var raquette2 = new Sprite("images/rectagle-blue.png", 300, 300);
+
+
+
+        // Variable vaisseau
+        var vaisseau = new Sprite("images/xwing.png", (larg/2)-15, (haut-100));
+        console.log (vaisseau);
+        var dis_dep = 14;
+        var vitesse_ennemy = 1;
+
+        var explosion = new Sprite("images/giphy.gif", 0, 0);
+        explosion.display = "none";
+        var explodeShip = new Sprite("images/explodAnim.gif", 20, 0);
+        explodeShip.display = "none";
+
+
+        //Sortie du vaisseau de la fenetre
+        function sortieVaisseau() {
+            if (vaisseau.left < 0) {
+                vaisseau.left = window.document.body.clientWidth - vaisseau.vais.width;
+            }
+            if (vaisseau.left > window.document.body.clientWidth - vaisseau.vais.width) {
+                vaisseau.left = 0;
+            };
+            if (vaisseau.top < 0) {
+                vaisseau.top = window.document.body.clientHeight - vaisseau.vais.height;
+            };
+            if (vaisseau.top > window.document.body.clientHeight - vaisseau.vais.height) {
+                vaisseau.top = 0;
+            };
+        }
+     
+        // function bruitage() {
+        // var expo = this.explosion;
+        // }
+
+        // function demarrage() {
+        // var listeDiv = document.querySelectorAll("#js090_test1 div img");
+        // for (var i = 0; i < listeDiv.length; i++) {
+        //     listeDiv[i].onclick = bruitage ;
+        // }
+        // }
+        // window.addEventListener("load",demarrage);
+
+
+        // Mouvement des ennemys à droite
+        function moveAnimationEnnemyToRight(ennemy) {
+            ennemy.left += vitesse_ennemy;
+            if (ennemy.left > window.document.body.clientWidth - ennemy.vais.width - 5) {
+                ennemy.top += 70;
+                if (ennemy.top > window.document.body.clientHeight - ennemy.vais.height) {
+                    ennemy.top = 0;
+                    ennemy.left = 0;
+                    ennemy.startAnimation(moveAnimationEnnemyToRight, 1);
+                };
+                ennemy.startAnimation(moveAnimationEnnemyToLeft, 1);
+            }
+        };
+
+
+        // Mouvement des ennemies à gauche
+        function moveAnimationEnnemyToLeft(ennemy) {
+            ennemy.left -= vitesse_ennemy;
+            if (ennemy.left <= 0) {
+                ennemy.top += 70;
+                if (ennemy.top > window.document.body.clientHeight - ennemy.vais.height) {
+                    ennemy.top = 0;
+                    ennemy.left = 0;
+                };
+                ennemy.startAnimation(moveAnimationEnnemyToRight, 1);
+            }
+        };
+
+        // for (var i = 1; i < 30; i++)
+        //     window["ennemy" + i].startAnimation(moveAnimationEnnemyToRight, 1);
+
+
+
+
+
+    </script> -->
+</body>
+
+</html>
