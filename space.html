@@ -9,6 +9,8 @@
     <link rel="stylesheet" type="text/css" media="screen" href="css/space.css" />
     <script type="text/javascript" src="js/space.js"></script>
     <script type="text/javascript" src="js/controller.js"></script>
+    <script type="text/javascript" src="js/myShip.js"></script>
+
     <!-- <script type="text/javascript" src="code_essai.js"></script> -->
     <!-- <embed src="music/CREATION - Cinematic Fantasy Orchestral Music Mix _ Epic Emotive Musical Journey.mp3" autostart="false" loop="false" hidden="true"></embed> -->
 </head>
@@ -18,6 +20,16 @@
         missile = {};
 
         // lancerMissile(10);
+
+
+
+        //taille de la fenêtre
+        if (document.body)
+        {
+            var larg = (document.body.clientWidth);
+            var heut = (document.body.clientHeight);
+        }
+        missile = {};
 
         var ennemy1 = new Sprite("images/atlantid.png", 900, 10);
         var ennemy2 = new Sprite("images/arca.png", 700, 10);
@@ -46,6 +58,10 @@
         missile2 = new Sprite("images/missile_2.png", 0, 0); missile2.display = "none";
         missile3 = new Sprite("images/missile_2.png", 0, 0); missile3.display = "none";
         missile4 = new Sprite("images/missile_2.png", 0, 0); missile4.display = "none";
+        missile5 = new Sprite("images/missile_2.png", 0, 0); missile5.display = "none";
+        missile6 = new Sprite("images/missile_2.png", 0, 0); missile6.display = "none";
+        missile7 = new Sprite("images/missile_2.png", 0, 0); missile7.display = "none";
+        missile8 = new Sprite("images/missile_2.png", 0, 0); missile8.display = "none";
         
         // missile[1] = new Sprite("images/missile_2.png", 0, 0); missile[1].display = "none";
         // missile[2] = new Sprite("images/missile_2.png", 0, 0); missile[2].display = "none";
