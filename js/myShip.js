@@ -81,7 +81,7 @@ function pressMissileGauche() {
                 missile1.top = vaisseau.top;
                 missile1.startAnimation(moveMissile, 12);
             } else
-            if ( missile1.top <= (vaisseau.top - 50) && (missile2.display == "none")){
+            if (missile1.top <= (vaisseau.top - 50) && (missile2.display == "none")){
                 console.log ("Lancement missile : 2");
                 console.log (missile1.top);
                 console.log ("\n");
@@ -113,17 +113,17 @@ function pressMissileGauche() {
                 missile4.left = vaisseau.left + vaisseau.vais.width - 10,
                 missile4.top = vaisseau.top;
                 missile4.startAnimation(moveMissile, 12);
-            } else
-            if (missile1.top <= (vaisseau.top - 200) && (missile5.display == "none")) {
-                console.log ('Lancement missile 5');
-                console.log (missile1.top);
-                console.log ("\n");
+            // } else
+            // if (missile1.top <= (vaisseau.top - 200) && (missile5.display == "none")) {
+            //     console.log ('Lancement missile 5');
+            //     console.log (missile1.top);
+            //     console.log ("\n");
 
-                missile5.vais.width = 5;
-                missile5.display = "block";
-                missile5.left = vaisseau.left;
-                missile5.top = vaisseau.top;
-                missile5.startAnimation(moveMissile, 12);
+            //     missile5.vais.width = 5;
+            //     missile5.display = "block";
+            //     missile5.left = vaisseau.left;
+            //     missile5.top = vaisseau.top;
+            //     missile5.startAnimation(moveMissile, 12);
             }
         // }
     }
