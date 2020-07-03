@@ -58,10 +58,21 @@
         missile2 = new Sprite("images/missile_2.png", 0, 0); missile2.display = "none";
         missile3 = new Sprite("images/missile_2.png", 0, 0); missile3.display = "none";
         missile4 = new Sprite("images/missile_2.png", 0, 0); missile4.display = "none";
-        missile5 = new Sprite("images/missile_2.png", 0, 0); missile5.display = "none";
-        missile6 = new Sprite("images/missile_2.png", 0, 0); missile6.display = "none";
-        missile7 = new Sprite("images/missile_2.png", 0, 0); missile7.display = "none";
-        missile8 = new Sprite("images/missile_2.png", 0, 0); missile8.display = "none";
+        // missile5 = new Sprite("images/missile_2.png", 0, 0); missile5.display = "none";
+        // missile6 = new Sprite("images/missile_2.png", 0, 0); missile6.display = "none";
+        // missile7 = new Sprite("images/missile_2.png", 0, 0); missile7.display = "none";
+        // missile8 = new Sprite("images/missile_2.png", 0, 0); missile8.display = "none";
+
+        // for (i=1; i<5; i++){
+        //     var missile = "Missile[" + i + "]";
+        //     alert (missile);
+        // }
+
+        for (i=1; i<=5; i++){
+            var missile = "missile" + i;
+            alert (missile);
+        }
+
         
         // missile[1] = new Sprite("images/missile_2.png", 0, 0); missile[1].display = "none";
         // missile[2] = new Sprite("images/missile_2.png", 0, 0); missile[2].display = "none";
@@ -78,8 +89,13 @@
         var dis_dep = 14;
         var vitesse_ennemy = 1;
 
-        var explosion = new Sprite("images/explosion6.png", 0, 0);
+        // var explosion = new Sprite("images/explosion6.png", 0, 0);
+        // explosion.display = "none";
+
+        var explosion = new Sprite("images/giphy.gif", 0, 0);
         explosion.display = "none";
+        var explodeShip = new Sprite("images/explodAnim.gif", 20, 0);
+        explodeShip.display = "none";
 
         function sortieVaisseau() {
             if (vaisseau.left < 0) {
