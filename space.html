@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/space.css" />
     <script type="text/javascript" src="js/space.js"></script>
-    <script type="text/javascript" src="js/controller.js"></script>
+    <!-- <script type="text/javascript" src="js/controller.js"></script> -->
     <script type="text/javascript" src="js/myShip.js"></script>
 
     <!-- <script type="text/javascript" src="code_essai.js"></script> -->
@@ -17,20 +17,17 @@
 
 <body>
     <script type="text/javascript">
-        missile = {};
-
-        // lancerMissile(10);
-
-
 
         //taille de la fenêtre
         if (document.body)
         {
             var larg = (document.body.clientWidth);
-            var heut = (document.body.clientHeight);
+            var haut = (document.body.clientHeight);
         }
         missile = {};
 
+        // Variable des objets du jeux
+        //Ennemy
         var ennemy1 = new Sprite("images/atlantid.png", 900, 10);
         var ennemy2 = new Sprite("images/arca.png", 700, 10);
         var ennemy3 = new Sprite("images/tie.png", 500, 10);
@@ -49,55 +46,27 @@
         var ennemy14 = new Sprite("images/B-Wing.png", 700, 300);
         var ennemy15 = new Sprite("images/Death Star - 2nd.png", 1100, 300);
 
+        // missiles
+        var missile1 = new Sprite("images/missile_2.png", 0, 0); missile1.display = "none";
+        var missile2 = new Sprite("images/missile_2.png", 0, 0); missile2.display = "none";
+        var missile3 = new Sprite("images/missile_2.png", 0, 0); missile3.display = "none";
+        var missile4 = new Sprite("images/missile_2.png", 0, 0); missile4.display = "none";
 
-        // var nbrmissile = new Sprite("images/missile_2.png", 0, 0); missile.display = "none";
+        // vaisseau
+        var vaisseau = new Sprite("images/xwing.png", larg/2, haut-100);
 
-        // missile = new Sprite("images/missile_2.png", 0, 0); missile.display = "none";  
-
-        missile1 = new Sprite("images/missile_2.png", 0, 0); missile1.display = "none";
-        missile2 = new Sprite("images/missile_2.png", 0, 0); missile2.display = "none";
-        missile3 = new Sprite("images/missile_2.png", 0, 0); missile3.display = "none";
-        missile4 = new Sprite("images/missile_2.png", 0, 0); missile4.display = "none";
-        // missile5 = new Sprite("images/missile_2.png", 0, 0); missile5.display = "none";
-        // missile6 = new Sprite("images/missile_2.png", 0, 0); missile6.display = "none";
-        // missile7 = new Sprite("images/missile_2.png", 0, 0); missile7.display = "none";
-        // missile8 = new Sprite("images/missile_2.png", 0, 0); missile8.display = "none";
-
-        // for (i=1; i<5; i++){
-        //     var missile = "Missile[" + i + "]";
-        //     alert (missile);
-        // }
-
-        for (i=1; i<=5; i++){
-            var missile = "missile" + i;
-            alert (missile);
-        }
-
-        
-        // missile[1] = new Sprite("images/missile_2.png", 0, 0); missile[1].display = "none";
-        // missile[2] = new Sprite("images/missile_2.png", 0, 0); missile[2].display = "none";
-        // missile[3] = new Sprite("images/missile_2.png", 0, 0); missile[3].display = "none";
-        // missile[4] = new Sprite("images/missile_2.png", 0, 0); missile[4].display = "none";
-        // missile[5] = new Sprite("images/missile_2.png", 0, 0); missile[5].display = "none";
-        // missile[6] = new Sprite("images/missile_2.png", 0, 0); missile[6].display = "none";
-        // missile[7] = new Sprite("images/missile_2.png", 0, 0); missile[7].display = "none";
-        // missile[8] = new Sprite("images/missile_2.png", 0, 0); missile[8].display = "none";
-        // missile[9] = new Sprite("images/missile_2.png", 0, 0); missile[9].display = "none";
-        // missile[10] = new Sprite("images/missile_2.png", 0, 0); missile[10].display = "none";
-
-        var vaisseau = new Sprite("images/xwing.png", 600, 500);
-        var dis_dep = 14;
-        var vitesse_ennemy = 1;
-
-        // var explosion = new Sprite("images/explosion6.png", 0, 0);
-        // explosion.display = "none";
-
+        //Explosion
         var explosion = new Sprite("images/explodAnim.gif", 0, 0);
-        
-        explosion.display = "none";
         var explodeShip = new Sprite("images/giphy.gif", 20, 0);
+
+        var dis_dep = 14;
+        var vitesse_ennemy = 2;
+
+        // Cacher les eplosions en début de jeu
+        explosion.display = "none";
         explodeShip.display = "none";
 
+        // Fontion sortie du vaisseau de la fenêtre réapparait de l'autre coté
         function sortieVaisseau() {
             if (vaisseau.left < 0) {
                 vaisseau.left = window.document.body.clientWidth - vaisseau.vais.width;
@@ -151,8 +120,8 @@
             }
         };
 
-        // for (var i = 1; i < 30; i++)
-        //     window["ennemy" + i].startAnimation(moveAnimationEnnemyToRight, 1);
+        for (var i = 1; i < 30; i++)
+            window["ennemy" + i].startAnimation(moveAnimationEnnemyToRight, 9);
 
     </script>
 </body>

@@ -14,11 +14,7 @@ window.addEventListener('keyup', (e) => {
 function run() {
     affectKey();
     sortieVaisseau();
-    // pressMissileGauche();
-    // pressMissileGauche(event);
     pressMissileGauche();
-    // pressMissileGauche2();
-    // pressMissileDroit();
     // krachShip();
 }
 
@@ -31,48 +27,27 @@ function affectKey() {
     if (keystate['ArrowRight']) {
         vaisseau.left += dis_dep;
     }
-    if (keystate['ArrowUp']) {
-        vaisseau.top -= dis_dep;
-    }
-    if (keystate['ArrowDown']) {
-        vaisseau.top += dis_dep;
-    }
+    // if (keystate['ArrowUp']) {
+    //     vaisseau.top -= dis_dep;
+    // }
+    // if (keystate['ArrowDown']) {
+    //     vaisseau.top += dis_dep;
+    // }
 }
 setInterval(run, 60);
-
-// function pressMissileGauche(event) {
-//     // var i = 0;
-//     if (keystate[" "] || keystate['5']) {
-//         var i = 1;
-//         if (i < 10) {
-//             var step = setInterval(function () {
-//                 if (i < 10) {
-//                     if (missile[i].display == "none") {
-//                         missile[i].vais.width = 5;
-//                         missile[i].display = "block";
-//                         missile[i].left = vaisseau.left;
-//                         missile[i].top = vaisseau.top + 15;
-//                         missile[i].startAnimation(moveMissile, 15);
-//                         i++;
-//                     }
-//                     step();
-//                 }
-//             }, 1500);
-//         }
-//     }
-// }
 
 // Fonction missile
 function pressMissileGauche() {
     if (keystate[" "] || keystate['5']) {
         console.log ("Vaisseau = " + vaisseau.top);
-        // for (i=0; i<5; i++){
-        //     var missile = "missile" + i;
-        //     console.log (missile);
-            if ((missile1.display == "none")) {
+        for (i=1; i<5; i++){
+            var missiles = "missile" + i;
+            console.log (missiles);
+            if ((missile1.display == "none" && missile4.display == "none")) {
                 console.log ('Lancement missile 1');
                 console.log (missile2.top);
                 console.log ("\n");
+                console.log (missile);
 
                 missile1.vais.width = 5;
                 missile1.display = "block";
@@ -112,19 +87,8 @@ function pressMissileGauche() {
                 missile4.left = vaisseau.left + vaisseau.vais.width - 10,
                 missile4.top = vaisseau.top;
                 missile4.startAnimation(moveMissile, 12);
-            // } else
-            // if (missile1.top <= (vaisseau.top - 200) && (missile5.display == "none")) {
-            //     console.log ('Lancement missile 5');
-            //     console.log (missile1.top);
-            //     console.log ("\n");
-
-            //     missile5.vais.width = 5;
-            //     missile5.display = "block";
-            //     missile5.left = vaisseau.left;
-            //     missile5.top = vaisseau.top;
-            //     missile5.startAnimation(moveMissile, 12);
             }
-        // }
+        }
     }
 }
  
@@ -188,8 +152,4 @@ function krachShip(ennemy) {
         }
     }
     return;
-
-    // console.log (explodeShip.left+ );
 };
-// console.log (explodeShip.top);
-// console.log (explodeShip.left);
