@@ -28,23 +28,23 @@
 
         // Variable des objets du jeux
         //Ennemy
-        var ennemy1 = new Sprite("images/atlantid.png", 900, 10);
-        var ennemy2 = new Sprite("images/arca.png", 700, 10);
-        var ennemy3 = new Sprite("images/tie.png", 500, 10);
-        var ennemy4 = new Sprite("images/spaceship-2844249_960_720.png", 300, 10);
-        var ennemy5 = new Sprite("images/cosmos.png", 1100, 10);
+        var ennemy1 = new Sprite("images/atlantid.png", larg/2+200, 10);
+        var ennemy2 = new Sprite("images/arca.png", larg/2+00, 10);
+        var ennemy3 = new Sprite("images/tie.png", larg/2-200, 10);
+        var ennemy4 = new Sprite("images/spaceship-2844249_960_720.png", larg/2-400, 10);
+        var ennemy5 = new Sprite("images/cosmos.png", larg/2+400, 10);
 
-        var ennemy6 = new Sprite("images/achblog133505.png", 400, 150);
-        var ennemy7 = new Sprite("images/clone.png", 1000, 150);
-        var ennemy8 = new Sprite("images/armada_stp2b_comp_re_001.png", 200, 150);
-        var ennemy9 = new Sprite("images/enter.png", 600, 150);
-        var ennemy10 = new Sprite("images/astronaut1.png", 800, 150);
+        var ennemy6 = new Sprite("images/achblog133505.png", larg/2-300, 150);
+        var ennemy7 = new Sprite("images/clone.png", larg/2+300, 150);
+        var ennemy8 = new Sprite("images/armada_stp2b_comp_re_001.png", larg/2-500, 150);
+        var ennemy9 = new Sprite("images/enter.png", larg/2-100, 150);
+        var ennemy10 = new Sprite("images/astronaut1.png", larg/2+100, 150);
 
-        var ennemy11 = new Sprite("images/superman1.png", 500, 300);
-        var ennemy12 = new Sprite("images/starwars_PNG19.png", 300, 300);
-        var ennemy13 = new Sprite("images/169110713.png", 900, 300);
-        var ennemy14 = new Sprite("images/B-Wing.png", 700, 300);
-        var ennemy15 = new Sprite("images/Death Star - 2nd.png", 1100, 300);
+        var ennemy11 = new Sprite("images/superman1.png", larg/2+200, 300);
+        var ennemy12 = new Sprite("images/starwars_PNG19.png", larg/2+0, 300);
+        var ennemy13 = new Sprite("images/169110713.png", larg/2-200, 300);
+        var ennemy14 = new Sprite("images/B-Wing.png", larg/2-400, 300);
+        var ennemy15 = new Sprite("images/Death Star - 2nd.png", larg/2+450, 300);
 
         // missiles
         var missile1 = new Sprite("images/missile_2.png", 0, 0); missile1.display = "none";
@@ -120,8 +120,8 @@
             }
         };
 
-        for (var i = 1; i < 30; i++)
-            window["ennemy" + i].startAnimation(moveAnimationEnnemyToRight, 9);
+        // for (var i = 1; i < 30; i++)
+        //     window["ennemy" + i].startAnimation(moveAnimationEnnemyToRight, 9);
 
     </script>
 </body>
